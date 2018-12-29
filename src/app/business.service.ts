@@ -18,4 +18,8 @@ export class BusinessService {
     console.log(obj);
     this.http.post(`${this.uri}/add`, obj).subscribe(res => console.log('Done'));
   }
+
+  getBusinesses() {
+    return this.http.get(`${this.uri}`);
+  }
 }
